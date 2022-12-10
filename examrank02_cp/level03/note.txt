@@ -1,0 +1,112 @@
+Assignment name  : str_capitalizer
+Expected files   : str_capitalizer.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes one or several strings and, for each argument,
+capitalizes the first character of each word (If it's a letter, obviously),
+puts the rest in lowercase, and displays the result on the standard output,
+followed by a \n.
+
+A "word" is defined as a part of a string delimited either by spaces/tabs, or
+by the start/end of the string. If a word only has one letter, it must be
+capitalized.
+
+If there are no arguments, the progam must display \n.
+
+Example:
+
+$> ./str_capitalizer | cat -e
+$
+$> ./str_capitalizer "a FiRSt LiTTlE TESt" | cat -e
+A First Little Test$
+$> ./str_capitalizer "__SecONd teST A LITtle BiT   Moar comPLEX" "   But... This iS not THAT COMPLEX" "     Okay, this is the last 1239809147801 but not    the least    t" | cat -e
+__second Test A Little Bit   Moar Complex$
+   But... This Is Not That Complex$
+     Okay, This Is The Last 1239809147801 But Not    The Least    T$
+$>
+
+--------------------------------------------------
+
+Assignment name  : epur_str
+Expected files   : epur_str.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string, and displays this string with exactly one
+space between words, with no spaces or tabs either at the beginning or the end,
+followed by a \n.
+
+A "word" is defined as a part of a string delimited either by spaces/tabs, or
+by the start/end of the string.
+
+If the number of arguments is not 1, or if there are no words to display, the
+program displays \n.
+
+Example:
+
+$> ./epur_str "See? It's easy to print the same thing" | cat -e
+See? It's easy to print the same thing$
+$> ./epur_str " this        time it      will     be    more complex  . " | cat -e
+this time it will be more complex .$
+$> ./epur_str "No S*** Sherlock..." "nAw S*** ShErLaWQ..." | cat -e
+$
+$> ./epur_str "" | cat -e
+$
+$>
+
+
+Assignment name  : expand_str
+Expected files   : expand_str.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays it with exactly three spaces
+between each word, with no spaces or tabs either at the beginning or the end,
+followed by a newline.
+
+A word is a section of string delimited either by spaces/tabs, or by the
+start/end of the string.
+
+If the number of parameters is not 1, or if there are no words, simply display
+a newline.
+
+Examples:
+
+$> ./expand_str "See? It's easy to print the same thing" | cat -e
+See?   It's   easy   to   print   the   same   thing$
+$> ./expand_str " this        time it      will     be    more complex  " | cat -e
+this   time   it   will   be   more   complex$
+$> ./expand_str "No S*** Sherlock..." "nAw S*** ShErLaWQ..." | cat -e
+$
+$> ./expand_str "" | cat -e
+$
+$>
+
+
+ Assignment name  : hidenp
+Expected files   : hidenp.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program named hidenp that takes two strings and displays 1
+followed by a newline if the first string is hidden in the second one,
+otherwise displays 0 followed by a newline.
+
+Let s1 and s2 be strings. We say that s1 is hidden in s2 if it's possible to
+find each character from s1 in s2, in the same order as they appear in s1.
+Also, the empty string is hidden in any string.
+
+If the number of parameters is not 2, the program displays a newline.
+
+Examples :
+
+$>./hidenp "fgex.;" "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6" | cat -e
+1$
+$>./hidenp "abc" "2altrb53c.sse" | cat -e
+1$
+$>./hidenp "abc" "btarc" | cat -e
+0$
+$>./hidenp | cat -e
+$
+$>
