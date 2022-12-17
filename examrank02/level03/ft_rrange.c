@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:00:58 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/15 15:01:29 by nkietwee         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:19:42 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@
 	return(res);
 }
 */
+/*
 #include <stdlib.h>
 
 int *ft_rrange(int start, int end)
@@ -83,4 +84,43 @@ int	main(void)
 		idx++;
 	}
 	printf("\n");
+}
+
+
+*/
+//-------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int     *ft_rrange(int start, int end)
+{
+	int	len;
+	int	i = 0;
+
+	len = start - end + 1;
+	if (len < 0)
+		len = -len;
+	int	*arr = malloc(sizeof(int) * len);
+	if (end <= start)
+	{
+		while (end <= start)
+			arr[i++] = end++;
+	}
+	else
+	{
+		while (end >= start)
+			arr[i++] = end--;
+	}
+	return (arr);
+}
+
+int	main(void)
+{
+	int	*arr = ft_rrange(5,-5);
+
+	int i = 0;
+	while (i < 11)
+		printf("%d\n", arr[i++]);
+	return(0);
 }
