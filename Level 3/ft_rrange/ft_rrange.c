@@ -6,121 +6,109 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:00:58 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/16 15:19:42 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:05:53 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<unistd.h>
-#include<stdlib.h>
-/*int     *ft_rrange(int start, int end)
-{
-	int	i;
-	int	*res;
-
-	i = 0;
-	if (start == 0 && end == 0)
-	{
-		res[0] = 0;
-		res[1] = '\0';
-		return(res);
-	}
-	if (start < end)
-		res = (int *)malloc(sizeof (int) * (end) - start + 1);
-	while (start <= end)
-	{
-		res[i] = start;
-		i++;
-		start++;
-	}
-	return(res);
-}
-*/
 /*
-#include <stdlib.h>
-
-int *ft_rrange(int start, int end)
-{
-	int *range;
-	int i = 0;
-	int n = end - start + 1;
-
-	if (start > end)
-		return (ft_rrange(end, start));
-	range = (int *)malloc(sizeof(int) * n);
-	if (range)
-	{
-		while (i < n)
-		{
-			range[i] = start;
-			start++;
-			i++;
-		}
-	}
-	return (range);
-}
-
-int	ft_abs(int nbr)
-{
-	if (nbr < 0)
-		return (-nbr);
-	return (nbr);
-}
-int	main(void)
-{
-	int	*tab;
-	int	idx;
-	int	start;
-	int	end;
-	int	size;
-	idx = 0;
-	start = 0;
-	end = -3;
-	tab = ft_rrange(start, end);
-	size = ft_abs(end - start) + 1;
-	while (idx < size)
-	{
-		printf(" [%d] ", tab[idx]);
-		idx++;
-	}
-	printf("\n");
-}
-
-
-*/
-//-------------------------------------------------------------------
-
-#include <stdio.h>
-#include <stdlib.h>
-
+#include<stdio.h>
+#include<stdlib.h>
 int     *ft_rrange(int start, int end)
 {
+	int	i;
+	int	test;
 	int	len;
-	int	i = 0;
+	int	*tab;
 
-	len = start - end + 1;
-	if (len < 0)
-		len = -len;
-	int	*arr = malloc(sizeof(int) * len);
-	if (end <= start)
+	i = 0;
+	len = 0;
+	test = 0;
+	if (start <= end)
+		len = end - start + 1;
+	else if (start > end)
+		len = start - end + 1;
+	tab = (int *)malloc(sizeof(int)  * len);
+	while (start <= end)
 	{
-		while (end <= start)
-			arr[i++] = end++;
+		tab[i] = end;
+		i++;
+		end--;
+		test = 1;
 	}
-	else
+	if (test = 0)
 	{
-		while (end >= start)
-			arr[i++] = end--;
+		while (start > end)
+		{
+			tab[i] = end;
+			i++;
+			end++;
+		}
 	}
-	return (arr);
+	return(tab);
 }
 
 int	main(void)
 {
-	int	*arr = ft_rrange(5,-5);
+	int	i;
+	int *tab = ft_rrange(-1, 2);
 
-	int i = 0;
-	while (i < 11)
-		printf("%d\n", arr[i++]);
+	i = 0;
+	while (i < 9)	
+	{
+		printf("tab[%d] = %d\n" ,i, tab[i]);
+		i++;
+		// free(tab[i]);
+	}
+	// free(tab);
 	return(0);
+}*/
+
+
+#include<stdio.h>
+#include<stdlib.h>
+/*-----test pass---------*/
+int     *ft_rrange(int start, int end)
+{
+	int	i;
+	int	diff;
+	int	len;
+	int	*tab;
+
+	i = 0;
+	diff = 0;
+	len = 0;
+	if (start <= end)
+	{
+		tab = (int *)malloc(sizeof(int)  * (end - start + 1));
+		diff = -1;
+	}
+	else if (start > end)
+	{
+		tab = (int *)malloc(sizeof(int)  * (start - end + 1));
+		diff = 1;
+	}
+	while(start != end)
+	{
+		tab[i] = end;
+		i++;
+		end = end + diff;
+	}
+	tab[i] = end;
+	return(tab);
 }
+/*
+int	main(void)
+{
+	int	i;
+	int *tab = ft_rrange(-1, 2);
+
+	i = 0;
+	while (i < 9)	
+	{
+		printf("tab[%d] = %d\n" ,i, tab[i]);
+		i++;
+		// free(tab[i]);
+	}
+	// free(tab);
+	return(0);
+}*/

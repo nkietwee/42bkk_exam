@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:25:32 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/19 21:50:04 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/21 14:04:30 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,13 @@ void ft_putstr(char *str)
         i++;
     }
 }
-
+// void    ft_freesplit(char **ret)
+// {
+//     // if (str)
+//         // free(str);
+//     if (str)
+//         free(str);
+// }   
 int main(int argc, char **argv)
 {
     int i;
@@ -161,11 +167,14 @@ int main(int argc, char **argv)
         {
             ft_putstr(ret[i]);
             free(ret[i]);
+            // ft_freesplit(ret[i]);
             write(1, " ", 1);
             i++;
         }
         ft_putstr(ret[0]);
+        free(ret[0]);
+        free (ret);
     }
     write(1, "\n", 1);
-    free (ret);
+    // ft_freesplit(ret);
 }
