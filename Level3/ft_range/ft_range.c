@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 01:41:26 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/20 14:33:21 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:22:46 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@
 
 // }
 
-
+/*
 int     *ft_range(int start, int end)
 {
     int i;
@@ -96,4 +96,52 @@ int main(void)
        while (i < 10) 
         printf("%d\n" ,tab[i++]);
 
+}*/
+
+/*-----testpass--------*/
+
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+
+int     *ft_range(int start, int end)
+{
+	int	i;
+	int	diff;
+	int	*tab;
+
+	i = 0;
+	diff = 0;
+
+	if (start <= end)
+	{
+		tab = (int * )malloc(sizeof(int ) * ( end  - start + 1));
+		diff = 1;
+	}
+	else if (start > end)
+	{
+		tab = (int * )malloc(sizeof(int ) * (start - end + 1));
+		diff = -1;
+	}
+	while (start != end)
+	{
+		tab[i] = start;
+		i++;
+		start = start + diff;
+	}
+	tab[i] = start;
+	return(tab);
+}
+
+int	main()
+{
+	int *tab = ft_range(1, 2);
+	int	i;
+
+	i = 0;
+	while(i < 4)
+	{
+		printf("tab[%d]  : %d\n", i , tab[i]);
+		i++;
+	}
 }
