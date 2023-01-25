@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lcm.c                                              :+:      :+:    :+:   */
+/*   ft_atoi_base_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 09:44:22 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/25 13:36:19 by nkietwee         ###   ########.fr       */
+/*   Created: 2023/01/25 15:41:19 by nkietwee          #+#    #+#             */
+/*   Updated: 2023/01/25 15:48:11 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
 #include<stdio.h>
+#include<unistd.h>
 
-unsigned int    lcm(unsigned int a, unsigned int b)
+
+int	ft_atoi_base(const char *str, int str_base)
 {
-    int n;
+	int	i;
+	int	syn;
+	int	res;
 
-    n = 0;
-    if (a < 0 || b < 0 || a == 0 || b == 0)
-        return(0);
-    if (a < b)
-        n = b;
-    else if (a >= b)
-        n = a;
-    while (1)
-    {
-        if (n % a == 0 && n % b == 0)
-            return(n);
-        n++;
-    }
-    return(0);
+	i = 0;
+	syn = 1;
+	res = 0;
+
+	while((str[i] >= 9 && str[i] <= 13 )|| str[i] == 32)
+		i++;
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			syn *= -1;
+		i++;
+	}
+	if (str_base <= 10)
+	{
+		while (str[i] >= '0' && str[i] <= )
+		{
+			res = (res * str_base) + str[i] - 48;
+			i++;
+		}
+		return(res);
+	}
+	else
+		return;
 }
-/*
-int main()
-{
-    printf("%d" ,lcm(22 ,12));
-
-}*/
