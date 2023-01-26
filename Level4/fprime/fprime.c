@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 23:59:33 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/19 22:19:47 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/26 01:45:02 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char *argv[])
 		fprime(atoi(argv[1]));
 	printf("\n");
 }*/
-
+/*
 #include<stdio.h>
 
 void    fprime(int num)
@@ -57,7 +57,7 @@ void    fprime(int num)
         {
             printf("%d", i);
             num = num / i;
-   			if (num != 1)         
+   			if (num != 1)
 				printf("*");
             i = 2;
         }
@@ -74,3 +74,5 @@ int main(int argc, char *argv[])
     printf("\n");
 
 }
+*/
+
