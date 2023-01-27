@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:09:56 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/19 17:22:55 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:55:09 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ int main(int argc, char *argv[])
             printf( "%d", (atoi(argv[1]) - atoi(argv[3])));
         else if (argv[2][0] == '/')
             printf( "%d", (atoi(argv[1]) / atoi(argv[3])));
+        else if (argv[2][0] == '%')
+            printf( "%d", (atoi(argv[1]) % atoi(argv[3])));
         else
             printf("0");
-        
+
     }
     // write (1, "\n", 1);
     printf("\n");

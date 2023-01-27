@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:55:47 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/06 16:28:51 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:55:24 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,7 @@ int    ft_strcmp(char *s1, char *s2)
         i++;
     return(s1[i] - s2[i]);
 
-    // while(s1[i] && s2[i])
-    // {
-    //     if (s1[i] == s2[i])
-    //         return(s1[i] - s2[i]);
-        
-    //     i++;
-    // }
-    // return(0);
+
 }
 
 int main(void)
@@ -40,7 +33,7 @@ int main(void)
 
     // char s3[10] = "a";
     // char s4[10] = "y";
-    
+
     printf("ft = %d\n" ,ft_strcmp("aA", "yA"));
     printf("%d\n" ,strcmp("aA", "yA"));
     // printf("%d\n" ,strcmp(s1, s2));
@@ -50,19 +43,3 @@ int main(void)
 
 }
 
-
-/* int main(void)
-{
-    printf("ft = %d\n" ,ft_strcmp("Helloa", "Hello")); 
-    printf("%d\n" ,strcmp("Helloa", "Hello")); 
-    
-    printf("ft = %d\n" ,ft_strcmp("Hello", "Hello")); 
-    printf("%d\n" ,strcmp("Hello", "Hello"));
-
-    printf("ft = %d\n" ,ft_strcmp("AHello", "Hello")); 
-    printf("%d\n" ,strcmp("CHello", "CHello"));  
-
-    return (0);
-}
-
- */

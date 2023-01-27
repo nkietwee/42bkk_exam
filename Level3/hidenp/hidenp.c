@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:29:30 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/25 23:23:47 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:10:01 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int main(int argc,char **argv)
         if (argv[1][i] == '\0')
             write(1, "1", 1);
         else
-            // return(0);
             write(1, "0", 1);
     }
     write(1, "\n", 1);

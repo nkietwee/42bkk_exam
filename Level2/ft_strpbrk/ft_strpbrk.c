@@ -6,73 +6,49 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 16:57:16 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/06 23:33:30 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 03:16:15 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
+char *ft_strchr(const char *s, int c)
+{
+    int i;
+
+    i = 0;
+    while(s[i])
+    {
+        if (s[i] == c)
+            return((char *)s);
+        i++;
+    }
+    return(0);
+}
+
 char	*ft_strpbrk(const char *s1, const char *s2)
 {
-    int j;
+    int     i;
 
-    j = 0;
+    i = 0;
+    // while(s1[i])
     while(*s1)
     {
-        j = 0;
-        while(s2[j])
-        {
-            if(*s1 == s2[j])
-                return((char *)s1);
-            j++;
-        }
+        // if (ft_strchr(s2, s1[i]) != 0)
+        if (ft_strchr(s2, *s1) != 0)
+            return((char *)(s1));
         s1++;
+        // i++;
     }
-    return(NULL);
+    return(0);
+}
+
+int main(void)
+{
+    printf("%s\n" ,   strpbrk("bscde2fghijk4l", "cbsd"));
+    printf("%s\n" ,ft_strpbrk("bscde2fghijk4l", "cbsd"));
+
 }
 
 
-
-
-/* char	*ft_strchr(const char *s, int c)
-{
-	size_t	idx;
-
-	idx = 0;
-	while (s[idx] != '\0')
-	{
-		if (s[idx] == c)
-			return ((char *)s);
-		idx++;
-	}
-	return (NULL);
-} */
-
-/* char	*ft_strpbrk(const char *s1, const char *s2)
-{
-	while (*s1)
-	{
-		if (ft_strchr(s2, *s1))
-			return ((char *)s1);
-		s1++;
-	}
-	return (NULL);
-} */
-int main () {
-   const char s1[] = "Helloworld";
-   const char s2[] = "Aew";
-
-   const char s3[] = "Helloworld";
-   const char s4[] = "Aew";
-
-   char *result1;
-   char *result2;
-   
-   result1 = strpbrk(s1, s2);
-   result2 = ft_strpbrk(s3, s4);
-
-   printf("The matching character : %c\n", *result1);
-   
-   printf("ft = %c\n" , *result2);
-}

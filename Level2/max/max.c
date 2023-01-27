@@ -6,39 +6,45 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:21:22 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/09 10:07:51 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:58:21 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 #include<stdio.h>
 
-int max( int *tab, unsigned int len)
+int		max(int* tab, unsigned int len)
 {
-    int result;
+
     unsigned int i;
+    int num = tab[0];
+    // int max;
 
     i = 0;
-    result = tab[i];
+    // max = 0;
+    if(!tab)
+        return(0);
     while (i < len)
     {
-        if (result < tab[i])
-        {
-            result = tab[i];
-        }
+        if (num < tab[i])
+            num = tab[i];
         i++;
+
     }
-    return(result);
+    return(num);
 }
+
 
 int	main(void)
 {
 	int	arr[4];
-
 	arr[0] = 7;
 	arr[1] = 2;
-	arr[2] = 4;
+	arr[2] = 14;
 	arr[3] = 9;
     printf ("%d", max(arr, 4));
+
+    int arr2[1] ;
+    printf ("%d", max(arr2, 4));
 	return (0);
 }

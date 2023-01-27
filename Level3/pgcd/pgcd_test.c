@@ -6,13 +6,13 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 14:56:55 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/25 15:35:29 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 03:04:25 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 #include<stdio.h>
-
+/*
 void ft_putnbr(int num)
 {
 	if (num > 9)
@@ -70,5 +70,40 @@ int	main(int argc, char **argv)
 		ft_putnbr(ft_check(num1,num2));
 	}
 	write(1, "\n", 1);
+	return(0);
+}
+*/
+
+void	ft_pgcd(int num1, int num2)
+{
+	int	i;
+	int	res;
+
+	i = 1;
+	res = 1;
+	while (i <= num1 && i <= num2)
+	{
+		if(num1 % i == 0 && num2 % i == 0)
+		{
+			res = res * i;
+			num1 = num1 / i;
+			num2 = num2 / i;
+		}
+		i++;
+	}
+	return(res);
+
+}
+
+int main(int ac, char **av)
+{
+	int	i;
+
+	i = 0;
+	if (ac == 3)
+	{
+		printf("%d" ,ft_pgcd(atoi(av[1]) , atoi(av[2]));
+	}
+	printf("\n");
 	return(0);
 }

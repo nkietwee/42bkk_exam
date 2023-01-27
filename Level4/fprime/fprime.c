@@ -6,28 +6,28 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 23:59:33 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/26 01:45:02 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:14:27 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
-/*
-void	fprime(int	n)
+
+void	ft_prime(int num)
 {
-	int	i;
+	int		i;
 
 	i = 2;
-	if (n == 1)
+	if (num == 1)
 		printf("1");
-	while (n > 1)
+	while (num > 1)
 	{
-		if (n % i == 0)
+		if (num % i == 0)
 		{
 			printf("%d", i);
-			n = n / i;
-			if ( n != 1)
+			num = num / i;
+			if (num != 1)
 				printf("*");
 			i = 2;
 		}
@@ -35,44 +35,17 @@ void	fprime(int	n)
 			i++;
 	}
 }
-int	main(int argc, char *argv[])
+
+int	main(int argc, char **argv)
 {
 	if (argc == 2)
-		fprime(atoi(argv[1]));
+	{
+		ft_prime(atoi(argv[1]));
+	}
 	printf("\n");
-}*/
-/*
-#include<stdio.h>
-
-void    fprime(int num)
-{
-    int i;
-
-    i = 2;
-    if (num == 1)
-        printf("1");
-    while (num > 1)
-    {
-        if (num % i == 0)
-        {
-            printf("%d", i);
-            num = num / i;
-   			if (num != 1)
-				printf("*");
-            i = 2;
-        }
-        else
-            i++;
-    }
-
+	// write(1, "\n", 1);
+	return(0);
 }
 
-int main(int argc, char *argv[])
-{
-    if (argc == 2)
-        fprime(atoi(argv[1]));
-    printf("\n");
 
-}
-*/
 

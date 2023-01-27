@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:57:40 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/06 23:17:45 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 03:10:07 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,39 @@
 #include<string.h>
 #include<unistd.h>
 
-/* size_t	ft_strspn(const char *s, const char *accept)
+char *ft_strchr(const char *s, int c)
 {
+    int i;
 
+    i = 0;
+    while (s[i])
+    {
+        if (s[i] == c)
+            return((char *)s);
+        i++;
+    }
+    return (0);
+}
 
-} */
+size_t	ft_strspn(const char *s, const char *accept)
+{
+    size_t i;
+
+    i = 0;
+    while(s[i])
+    {
+        if (ft_strchr(accept, s[i]) == 0)
+            // return(++i);
+            return(i++);
+        i++;
+    }
+    return(i);
+}
 
 int main(void)
 {
-    // printf("%lu" ,ft_strspn("Hello","He"));
-    printf("strspn = %lu\n" ,strspn("World","Wod"));
-    printf("strcspn = %lu\n" ,strcspn("World","l"));
+    // printf("strspn = %lu\n" ,strspn("abc","xyz"));
+    // printf("ft_strspn = %lu\n" ,ft_strspn("abc","xyz"));
+    printf("strspn = %lu\n" ,      strspn("aaaaabhbbbbc","ab"));
+    printf("ft_strspn = %lu\n" ,ft_strspn("aaaaabhbbbbc","ab"));
 }

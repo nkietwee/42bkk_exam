@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   search_and_replace.c                               :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 00:45:08 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 11:54:05 by nkietwee         ###   ########.fr       */
+/*   Created: 2023/01/27 11:43:07 by nkietwee          #+#    #+#             */
+/*   Updated: 2023/01/27 11:43:10 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<stdlib.h>
+#include<unistd.h>
 
-int main(int argc,char **argv)
+
+void	ft_putnbr(int num)
 {
-    int i;
+	if (num > 16)
+		ft_putnbr(num / 16);
+	write(1, &"0123456789abcdef"[num % 16], 1);
+}
 
-    i = 0;
-    if (argc == 4)
-    {
-        while (argv[1][i] && argv[2][1] == '\0' && argv[3][1] == '\0')
-        {
-            if (argv[1][i] == argv[2][0])
-                argv[1][i] = argv[3][0];
-            write(1, &argv[1][i], 1);
-            i++;
-        }
-    }
-    write(1, "\n", 1);
-    return(0);
+int	main(int ac, char **av)
+{
+	int	i;
+	int	num;
+
+	i = 0;
+	if (ac == 2)
+	{
+		num = atoi(av[1]);
+		ft_putnbr(num);
+	}
+	write(1, "\n", 1);
 }

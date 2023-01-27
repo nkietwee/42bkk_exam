@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:34:29 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/14 20:36:21 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:14:03 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,6 @@ int	main(int argc,char *argv[])
 			ft_putnbr(res);
 			write(1, " = ", 3);
 			ft_putnbr(num * res);
-		//	if( num < 9)
-			//	write(1, "\n", 1);
 			if (num == 9)
 				break;
 			write(1, "\n", 1);

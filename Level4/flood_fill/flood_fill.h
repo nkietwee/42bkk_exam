@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy_2.c                                      :+:      :+:    :+:   */
+/*   flood_fill.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 22:34:18 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/05 22:36:55 by nkietwee         ###   ########.fr       */
+/*   Created: 2023/01/27 02:00:21 by nkietwee          #+#    #+#             */
+/*   Updated: 2023/01/27 02:03:13 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-char    *ft_strcpy(char *s1, char *s2) 
+#ifndef T_POINT_FLOOD_FILL
+# define T_POINT_FLOOD_FILL
+typedef struct  s_point
 {
-    int i;
+    int           x;
+    int           y;
+}               t_point;
 
-    i = 0;
-    while (s2[i] != '\0')
-    {
-        s1[i] = s2[i];
-        i++;
-    }
-    s1[i] = '\0';
-}
+#endif
 
-int main(void)
