@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi_base_final.c                                  :+:      :+:    :+:   */
+/*   atoi_base.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 23:40:04 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/18 23:46:42 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:04:06 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+/*
 int	ft_atoi_morethanten(char *str, int base)
 {
 	int sum = 0;
@@ -63,4 +63,43 @@ int	ft_atoi_base(const char *str, int str_base)
 int	main(void)
 {
 	printf("%d", ft_atoi_base("13A", 16));
+}
+*/
+
+
+// int	ft_atoi_base(const char *str, int str_base)
+
+
+int	ft_atoi_base(const char *str, int str_base)
+{
+	int	i;
+	int	sign;
+	int	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while (str[i] != '\0')
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+			result = (result * str_base) + str[i] - 48;
+		else if (str[i] >= 'A' && str[i] <= 'F')
+			result = (result * str_base) + (str[i] - 'A' + 10);
+		else if (str[i] >= 'a' && str[i] <= 'f')
+			result = (result * str_base) + (str[i] - 'a' + 10);
+		i++;
+	}
+	return (result * sign);
+}
+
+#include<stdio.h>
+int	main(void)
+{
+	printf("%d" , ft_atoi_base("31", 16));
+
 }

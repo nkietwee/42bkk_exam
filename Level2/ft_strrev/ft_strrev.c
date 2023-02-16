@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 18:37:16 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 11:56:51 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/28 16:39:33 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,19 @@ char    *ft_strrev(char *str)
 }
 int main(void)
 {
-    //char    *str = "Hello";
-    char    str[] = "Hello";
+    char    *str1 = "Hello";
+    char    str2[] = "World";
 
-    printf("%s" ,ft_strrev(str));
+    // printf("%s" ,ft_strrev(str));
+    printf("%p\n" ,str1); // pointer
+    printf("%p\n" ,&str2); // pointer
+    printf("%p\n" ,"Hello"); // address Hello
+    printf("%p\n" ,"World");
 
-
+    // str = "World"; //
+    // printf("%s\n" ,str); // pointer
+    // printf("%p\n" ,str); // pointer
+    // str[0] = 'c';
+    // printf("str[0] = %p\n" ,str[0]); // pointer
+    // printf("str[0] = %p\n" ,str[0]); // pointer
 }

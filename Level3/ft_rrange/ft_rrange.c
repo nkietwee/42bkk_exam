@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:00:58 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 12:09:55 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/02/11 12:46:06 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ int     *ft_rrange(int start, int end)
 	tab[i] = end;
 	return(tab);
 }
-/*
+
 int	main(void)
 {
 	int	i;
-	int *tab = ft_rrange(-1, 2);
+	int *tab = ft_rrange(-1, -5);
 
 	i = 0;
 	while (i < 9)
@@ -57,4 +57,4 @@ int	main(void)
 	}
 	// free(tab);
 	return(0);
-}*/
+}

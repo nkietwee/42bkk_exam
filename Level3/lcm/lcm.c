@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 09:44:22 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/25 13:36:19 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:07:52 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ unsigned int    lcm(unsigned int a, unsigned int b)
     int n;
 
     n = 0;
-    if (a < 0 || b < 0 || a == 0 || b == 0)
+    if (a == 0 || b == 0)
         return(0);
     if (a < b)
         n = b;
