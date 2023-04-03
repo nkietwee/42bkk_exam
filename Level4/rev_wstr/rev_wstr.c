@@ -5,22 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 01:52:02 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 12:16:10 by nkietwee         ###   ########.fr       */
+/*   Created: 2023/04/04 03:03:58 by nkietwee          #+#    #+#             */
+/*   Updated: 2023/04/04 03:04:04 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include<unistd.h>
-// #include<stdio.h>
-
-
-
-
 
 /* #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 char	**ft_split(char *str)
 {
 	int	i = 0;
@@ -46,7 +38,6 @@ char	**ft_split(char *str)
 	ret[k] = NULL;
 	return (ret);
 }
-
 void	ft_putstr(char *str)
 {
 	int	len = 0;
@@ -54,7 +45,6 @@ void	ft_putstr(char *str)
 		len++;
 	write(1, str, len);
 }
-
 int	main(int ac, char **av)
 {
 	int	i = 0;
@@ -85,7 +75,6 @@ int	main(int argc, char **argv)
 	int	start;
 	int	end;
 	int	flag;
-
 	i = 0;
 	start = 0;
 	end = 0;
