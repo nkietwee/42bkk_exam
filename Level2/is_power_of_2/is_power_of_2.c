@@ -6,20 +6,21 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 23:07:36 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/15 14:52:24 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:24:56 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<unistd.h>
 
+/*It don't finish */
 int	    is_power_of_2(unsigned int n)
-{   
+{
     unsigned int i;
     unsigned int stop;
 
     i = 1;
-    stop = -1; // overflow 
+    stop = -1; // overflow
     stop = (stop / 2) + 2; // plus 2 because protect max int
     while (i <= n && i < stop)
     {

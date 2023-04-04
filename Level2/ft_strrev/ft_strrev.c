@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 18:37:16 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/28 16:39:33 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:24:00 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char    *ft_strrev(char *str)
     }
     return(str);
 }
+
+/*
 int main(void)
 {
     char    *str1 = "Hello";
@@ -60,3 +62,4 @@ int main(void)
     // printf("str[0] = %p\n" ,str[0]); // pointer
     // printf("str[0] = %p\n" ,str[0]); // pointer
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:44:36 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/02/12 21:23:08 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:22:42 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_atoi(const char *str)
     return(result * sym);
 }
 
+/*
 int main(void)
 {
     printf("%d", ft_atoi("123"));
@@ -46,3 +47,4 @@ int main(void)
     printf("%d", atoi("123\n"));
 
 }
+*/

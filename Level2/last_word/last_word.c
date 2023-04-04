@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lastword.c                                         :+:      :+:    :+:   */
+/*   last_word.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:34:43 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 08:53:46 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:28:02 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
-
+/*first */
 /*
 int main(int argc, char *argv[])
 {
@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 
 
 }*/
+/* second*/
 /*
 #include<unistd.h>
 #include<stdio.h>
@@ -70,7 +71,7 @@ int	main(int argc, char *argv[])
 }
 */
 
-
+/* third*/
 int	main(int ac,char **av)
 {
 	int	i;

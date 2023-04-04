@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 16:38:20 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/06 16:49:15 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:23:18 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ char    *ft_strdup(char *src)
     int i;
     int len;
     char    *dst;
-    
+
     i = 0;
     if (!src)
         return (NULL);
     len = ft_strlen(src);
     dst = (char *)malloc(sizeof(char) * (len + 1));
-    while (i < len) 
+    while (i < len)
     {
         dst[i] = src[i];
         i++;
@@ -45,7 +45,7 @@ char    *ft_strdup(char *src)
     dst[i] = '\0';
     return (dst);
 }
-
+/*
 int main(void)
 {
     char tmp[] = "Hello";
@@ -53,4 +53,4 @@ int main(void)
     printf("%s", strdup(tmp));
 
 
-}
+}*/

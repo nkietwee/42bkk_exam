@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:09:53 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 11:58:37 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:25:35 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ unsigned char	reverse_bits(unsigned char octet)
 	return(bit);
 
 }
+/*
 int main(void)
 {
     printf("%hhu" ,reverse_bits(57));
 
-}
+}*/
 
 

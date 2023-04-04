@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:57:40 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 03:10:07 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:24:11 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ size_t	ft_strspn(const char *s, const char *accept)
     }
     return(i);
 }
-
+/*
 int main(void)
 {
     // printf("strspn = %lu\n" ,strspn("abc","xyz"));
     // printf("ft_strspn = %lu\n" ,ft_strspn("abc","xyz"));
     printf("strspn = %lu\n" ,      strspn("aaaaabhbbbbc","ab"));
     printf("ft_strspn = %lu\n" ,ft_strspn("aaaaabhbbbbc","ab"));
-}
+}*/

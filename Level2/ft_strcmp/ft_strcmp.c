@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:55:47 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 11:55:24 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:23:04 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,12 @@ int    ft_strcmp(char *s1, char *s2)
 
 
 }
-
+/*
 int main(void)
 {
-    // char s1[10] = "aA";
-    // char s2[10] = "yA";
-
-    // char s3[10] = "a";
-    // char s4[10] = "y";
-
     printf("ft = %d\n" ,ft_strcmp("aA", "yA"));
     printf("%d\n" ,strcmp("aA", "yA"));
-    // printf("%d\n" ,strcmp(s1, s2));
-
-    // printf("ft = %d\n" ,ft_strcmp(s3, s4));
-    // printf("%d\n" ,strcmp("a", "y"));
 
 }
 
+*/

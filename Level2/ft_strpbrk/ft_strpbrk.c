@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 16:57:16 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 03:16:15 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:23:36 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,12 @@ char	*ft_strpbrk(const char *s1, const char *s2)
     return(0);
 }
 
+/*
 int main(void)
 {
     printf("%s\n" ,   strpbrk("bscde2fghijk4l", "cbsd"));
     printf("%s\n" ,ft_strpbrk("bscde2fghijk4l", "cbsd"));
 
-}
+}*/
 
 

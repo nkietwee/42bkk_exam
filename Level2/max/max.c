@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:21:22 by nkietwee          #+#    #+#             */
-/*   Updated: 2023/01/27 11:58:21 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:25:22 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ int		max(int* tab, unsigned int len)
 
     unsigned int i;
     int num = tab[0];
-    // int max;
 
     i = 0;
-    // max = 0;
     if(!tab)
         return(0);
     while (i < len)
