@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nkietwee <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 01:37:31 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/11/29 01:45:45 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 03:09:23 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char    *ft_strcpy(char *s1, char *s2)
 	return(s1);
 }
 
+/*
 int	main(void)
 {
 	char	s1[100] ;
@@ -37,3 +38,4 @@ int	main(void)
 	printf("%s\n",strcpy(s2, "hello"));
 
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 01:51:13 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/06 00:16:48 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:17:46 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,8 @@ void	ft_swap(int *a, int *b)
 
 	// c = *a;
 	// *a = *b;
-	// *b = c; 
+	// *b = c;
 
-	int	*c = NULL;
-
-	*c = *a;
-	*a = *b;
-	*b = *c; 
 }
 
 int	main(void)
@@ -34,9 +29,9 @@ int	main(void)
 	int	b;
 	int	c;
 
-	a = 10; 
-	b = 5; 
-	c = 3; 
+	a = 10;
+	b = 5;
+	c = 3;
 	ft_swap(&a ,&b);
 	printf("a = %d\n",a);
 	printf("b = %d\n",b);

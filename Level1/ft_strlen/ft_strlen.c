@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 01:46:53 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/07 00:44:10 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:17:32 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <string.h>
 #include <unistd.h>
 
+/*first*/
 /* int	ft_strlen(char *str)
 {
 	int	i;
@@ -25,6 +26,8 @@
 }
 
  */
+
+/*second*/
 
 int	ft_strlen(char *str)
 {

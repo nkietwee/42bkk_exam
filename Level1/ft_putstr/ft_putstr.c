@@ -6,7 +6,7 @@
 /*   By: nkietwee <nkietwee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 01:32:21 by nkietwee          #+#    #+#             */
-/*   Updated: 2022/12/05 23:01:33 by nkietwee         ###   ########.fr       */
+/*   Updated: 2023/04/04 03:09:14 by nkietwee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	ft_putstr(char *str)
 		write (1, &str[i++], 1);
 }
 
+/*
 int	main(void)
 {
 	ft_putstr("Hello ");
 }
+*/
