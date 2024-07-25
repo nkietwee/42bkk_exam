@@ -11,7 +11,8 @@ ASpell::ASpell(ASpell const& r) :_name(r.getName()), _effects(r.getEffects())
 
 ASpell& ASpell::operator=(ASpell const& r)
 {
-	if (this != &r) {
+	if (this != &r)
+	{
 		this->_name = r.getName();
 		this->_effects = r.getEffects();
 	}

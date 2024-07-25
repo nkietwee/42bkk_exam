@@ -3,6 +3,8 @@
 
 #include "ASpell.hpp" 
 
+class ASpell;
+
 class Polymorph : public ASpell
 {
 	public:

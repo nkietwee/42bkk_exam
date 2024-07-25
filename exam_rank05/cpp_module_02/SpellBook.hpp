@@ -2,7 +2,10 @@
 #define SPELLBOOK_H
 
 #include <map>
+
 #include "ASpell.hpp"
+
+class ASpell;
 
 class SpellBook
 {

@@ -2,7 +2,10 @@
 #define TARGETGENERATOR_H
 
 #include <map>
+
 #include "ATarget.hpp"
+
+class ATarget;
 
 class TargetGenerator
 {

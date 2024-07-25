@@ -11,9 +11,8 @@ ATarget::ATarget(ATarget const& r) :_type(r.getType())
 
 ATarget& ATarget::operator=(ATarget const& r)
 {
-	if (this != &r) {
+	if (this != &r)
 		this->_type = r.getType();
-	}
 	return (*this);
 }
 

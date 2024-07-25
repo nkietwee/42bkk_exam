@@ -4,8 +4,12 @@
 #include <string>
 #include <iostream>
 #include <map>
+
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+
+class ASpell;
+class ATarget;
 
 class Warlock
 {

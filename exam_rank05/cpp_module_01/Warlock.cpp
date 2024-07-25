@@ -38,23 +38,20 @@ void 		Warlock::introduce() const
 
 void		Warlock::learnSpell(ASpell* r)
 {
-	if (r != NULL) {
+	if (r != NULL)
 		this->_spellBook[r->getName()] = r->clone();
-	}
 }
 
 void		Warlock::forgetSpell(std::string const &spellName)
 {
-	if (this->_spellBook.find(spellName) != this->_spellBook.end()) {
+	if (this->_spellBook.find(spellName) != this->_spellBook.end())
 		this->_spellBook.erase(spellName);
-	}
 }
 
 void		Warlock::launchSpell(std::string const &spellName, ATarget const& r)
 {
 	if (this->_spellBook.find(spellName) != this->_spellBook.end())
     {
-
 		ASpell	*s = this->_spellBook[spellName];
         if (s != NULL)
 		    s->launch(r);

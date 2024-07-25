@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+
 #include "ATarget.hpp"
 
 class ATarget;
@@ -20,7 +21,7 @@ class ASpell
 
 		virtual ASpell* clone(void) const = 0;
 
-		void			launch(ATarget const& r) const ;
+		void launch(ATarget const& r) const;
 
 	protected:
 		std::string	_name;

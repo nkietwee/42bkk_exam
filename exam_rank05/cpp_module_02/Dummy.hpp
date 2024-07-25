@@ -3,6 +3,8 @@
 
 #include "ATarget.hpp"
 
+class ATarget;
+
 class Dummy : public ATarget
 {
 	public:

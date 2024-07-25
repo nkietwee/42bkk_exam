@@ -3,6 +3,8 @@
 
 #include "ASpell.hpp" 
 
+class ASpell;
+
 class Fireball : public ASpell
 {
 	public:
